@@ -5,8 +5,8 @@ account: mbarnfield
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 1699288
-bundleId: 2750780
+bundleId: 2750869
 url: https://mbarnfield.shinyapps.io/democrat_bandwagon/
-when: 1579864191.89593
+when: 1579868736.08506
 asMultiple: FALSE
 asStatic: FALSE

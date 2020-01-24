@@ -269,12 +269,12 @@ server <- function(input, output) {
                switched_from_trump = sum(switched_from_trump),
                switched_from_contests = sum(switched_from_contests)))
     
-    rv_hidden$data1 <- experiment[row_num_1 + input$one*2 + input$two*2,]
-    rv_hidden$data2 <- experiment[row_num_2 + input$one*2 + input$two*2,]
+    rv_hidden$data1 <- experiment[row_num_1 + input$one*2 + input$two*2 + input*abstain*2,]
+    rv_hidden$data2 <- experiment[row_num_2 + input$one*2 + input$two*2 + input*abstain*2,]
     
     
-    rv_shown$data2 <- profiles[row_num_2 + input$one*2 + input$two*2,]
-    rv_shown$data1 <- profiles[row_num_1 + input$one*2 + input$two*2,]
+    rv_shown$data2 <- profiles[row_num_2 + input$one*2 + input$two*2 + input*abstain*2,]
+    rv_shown$data1 <- profiles[row_num_1 + input$one*2 + input$two*2 + input*abstain*2,]
     
     col_no$col_no <- sample(ncol(profiles[1, ]))
 
@@ -376,12 +376,12 @@ server <- function(input, output) {
                switched_from_trump = sum(switched_from_trump),
                switched_from_contests = sum(switched_from_contests)))
     
-    rv_hidden$data1 <- experiment[row_num_1 + input$one*2 + input$two*2,]
-    rv_hidden$data2 <- experiment[row_num_2 + input$one*2 + input$two*2,]
+    rv_hidden$data1 <- experiment[row_num_1 + input$one*2 + input$two*2 + input*abstain*2,]
+    rv_hidden$data2 <- experiment[row_num_2 + input$one*2 + input$two*2 + input*abstain*2,]
     
     
-    rv_shown$data2 <- profiles[row_num_2 + input$one*2 + input$two*2,]
-    rv_shown$data1 <- profiles[row_num_1 + input$one*2 + input$two*2,]
+    rv_shown$data2 <- profiles[row_num_2 + input$one*2 + input$two*2 + input*abstain*2,]
+    rv_shown$data1 <- profiles[row_num_1 + input$one*2 + input$two*2 + input*abstain*2,]
     
     col_no$col_no <- sample(ncol(profiles[1, ]))
     
@@ -434,6 +434,16 @@ server <- function(input, output) {
                                   switched_to_contests = 0,
                                   switched_from_contests = 0
       )}))
+    
+    rv_hidden$data1 <- experiment[row_num_1 + input$one*2 + input$two*2 + input*abstain*2,]
+    rv_hidden$data2 <- experiment[row_num_2 + input$one*2 + input$two*2 + input*abstain*2,]
+    
+    
+    rv_shown$data2 <- profiles[row_num_2 + input$one*2 + input$two*2 + input*abstain*2,]
+    rv_shown$data1 <- profiles[row_num_1 + input$one*2 + input$two*2 + input*abstain*2,]
+    
+    col_no$col_no <- sample(ncol(profiles[1, ]))
+    
   })
   
   # amce model
